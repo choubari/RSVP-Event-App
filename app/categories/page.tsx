@@ -4,7 +4,7 @@ import { Category } from "@/types";
 import Link from "next/link";
 import { Suspense } from "react";
 
-export async function getCategories() {
+async function getCategories() {
   const categories = await fetch(`${process.env.API_ENDPOINT}/categories`);
   return categories;
 }
@@ -28,7 +28,7 @@ async function CategoriesList() {
   );
 }
 
-export default async function Categories() {
+export default function Categories() {
   return (
     <div className="w-full max-w-screen-lg mx-auto">
       <h1 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-medium my-3">
