@@ -1,7 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
+  images: {
+    domains: ['gcdn.imgix.net', 'images.unsplash.com'],
+    // remotePatterns: [
+    //   {
+    //     protocol: 'https',
+    //     hostname: 'gcdn.imgix.net',
+    //     port: '',
+    //     pathname: '/**',
+    //   },
+    // ],
   },
 }
 
